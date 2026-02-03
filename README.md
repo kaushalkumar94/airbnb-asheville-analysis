@@ -1,6 +1,6 @@
 # Airbnb Asheville Market Analysis
 
-## 📌 Project Overview
+##  Project Overview
 This project analyzes Airbnb listing and review data to evaluate **Asheville** as a potential
 market for expansion. The analysis focuses on pricing trends, neighborhood activity,
 host behavior, and demand patterns using real Airbnb data.
@@ -10,7 +10,7 @@ step-by-step analytical approach.
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 - Understand nightly pricing trends across Asheville
 - Identify the most active neighborhoods and hosts
 - Analyze review activity as a proxy for guest demand
@@ -18,14 +18,14 @@ step-by-step analytical approach.
 
 ---
 
-## 📂 Data Sources
+##  Data Sources
 - `listings.csv` – Property-level information (price, room type, host details, availability)
 - `reviews.csv` – Guest reviews with timestamps (used for demand analysis)
 - `neighbourhoods.csv` – Reference neighborhood data
 
 ---
 
-## 🛠 Tools & Technologies
+##  Tools & Technologies
 - Python
 - Pandas
 - NumPy
@@ -36,7 +36,7 @@ step-by-step analytical approach.
 
 ---
 
-## 🔍 Work Completed So Far
+##  Work Completed So Far
 
 ### 1. Project Setup
 - Created a clean, professional project structure
@@ -58,7 +58,7 @@ step-by-step analytical approach.
 
 ---
 
-## 📈 Next Steps
+##  Next Steps
 - Merge listings and reviews datasets
 - Perform exploratory data analysis (EDA)
 - Analyze pricing by neighborhood and room type
@@ -67,12 +67,12 @@ step-by-step analytical approach.
 
 ---
 
-## 📌 Status
-🚧 **Work in progress**  
+##  Status
+ **Work in progress**  
 This repository is being actively developed with incremental commits.
 
 ---
 
-## 👤 Author
+##  Author
 Kaushal Kumar  
 
