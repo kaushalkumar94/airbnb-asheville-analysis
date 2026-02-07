@@ -61,12 +61,11 @@ step-by-step analytical approach.
 
 ---
 
-### 4. Data Cleaning & Preparation
-- Removed listings with missing `price` values (core analysis variable)
-- Retained missing values in `last_review` and `reviews_per_month` as they indicate
-  new or inactive listings
-- Verified that all key analytical fields (price, neighborhood, room type, host info)
-  are complete and reliable
+### 4. Processed Dataset Export
+- Saved the cleaned dataset as `clean_listings.csv`
+- Maintained separation between raw and processed data
+- This dataset will be used for all further analysis and visualization
+
 
 ---
 
