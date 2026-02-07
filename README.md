@@ -1,6 +1,6 @@
 # Airbnb Asheville Market Analysis
 
-##  Project Overview
+## Project Overview
 This project analyzes Airbnb listing and review data to evaluate **Asheville** as a potential
 market for expansion. The analysis focuses on pricing trends, neighborhood activity,
 host behavior, and demand patterns using real Airbnb data.
@@ -10,7 +10,7 @@ step-by-step analytical approach.
 
 ---
 
-##  Objectives
+## Objectives
 - Understand nightly pricing trends across Asheville
 - Identify the most active neighborhoods and hosts
 - Analyze review activity as a proxy for guest demand
@@ -18,14 +18,14 @@ step-by-step analytical approach.
 
 ---
 
-##  Data Sources
+## Data Sources
 - `listings.csv` – Property-level information (price, room type, host details, availability)
 - `reviews.csv` – Guest reviews with timestamps (used for demand analysis)
 - `neighbourhoods.csv` – Reference neighborhood data
 
 ---
 
-##  Tools & Technologies
+## Tools & Technologies
 - Python
 - Pandas
 - NumPy
@@ -36,43 +36,65 @@ step-by-step analytical approach.
 
 ---
 
-##  Work Completed So Far
+## Work Completed So Far
 
 ### 1. Project Setup
-- Created a clean, professional project structure
+- Created a clean and organized project structure
 - Set up GitHub repository and version control
-- Installed and verified all required dependencies
-
-### 2. Data Loading & Inspection
-- Loaded all raw datasets into Jupyter Notebook
-- Inspected dataset structure, data types, and sizes
-- Identified missing values and irrelevant columns
-
-### 3. Data Cleaning & Preparation
-- Dropped empty and non-informative columns (`neighbourhood_group`, `license`)
-- Removed listings with missing price values
-- Converted price to numeric format
-- Removed unrealistic price outliers
-- Handled missing review-related fields logically
-- Converted review dates to datetime format
+- Configured Jupyter Notebook environment
 
 ---
 
-##  Next Steps
+### 2. Data Loading & Initial Inspection
+- Loaded all datasets (`listings`, `reviews`, `neighbourhoods`) from local directory
+- Inspected dataset dimensions, column names, and data types
+- Verified schema consistency across datasets
+
+---
+
+### 3. Missing Value Analysis
+- Performed a detailed missing value assessment on all columns
+- Identified columns with 100% missing values:
+  - `neighbourhood_group`
+  - `license`
+- Dropped non-informative columns from the dataset
+
+---
+
+### 4. Data Cleaning & Preparation
+- Removed listings with missing `price` values (core analysis variable)
+- Retained missing values in `last_review` and `reviews_per_month` as they indicate
+  new or inactive listings
+- Verified that all key analytical fields (price, neighborhood, room type, host info)
+  are complete and reliable
+
+---
+
+## Current Data Status
+- Dataset is structurally clean and analysis-ready
+- Core pricing and location fields have no missing values
+- Review-related missing values are preserved intentionally for demand analysis
+
+---
+
+## Next Steps
+- Clean and standardize the `price` column (convert to numeric, inspect outliers)
 - Merge listings and reviews datasets
-- Perform exploratory data analysis (EDA)
-- Analyze pricing by neighborhood and room type
-- Examine review trends to identify demand seasonality
+- Perform exploratory data analysis (EDA):
+  - Price distribution (mean vs median)
+  - Room type distribution
+  - Listings per neighborhood
+- Analyze review trends to identify demand seasonality
+- Conduct host-level analysis
 - Generate market expansion recommendations
 
 ---
 
-##  Status
- **Work in progress**  
-This repository is being actively developed with incremental commits.
+## Status
+**Work in progress**  
+This repository is under active development with incremental commits.
 
 ---
 
-##  Author
-Kaushal Kumar  
-
+## Author
+Kaushal Kumar
