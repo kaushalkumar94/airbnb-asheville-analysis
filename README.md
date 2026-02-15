@@ -1,12 +1,12 @@
 # Airbnb Asheville Market Analysis
 
 ## Project Overview
-This project analyzes Airbnb listing and review data to evaluate **Asheville** as a potential
+This project analyzes Airbnb listing and review data to evaluate Asheville as a potential
 market for expansion. The analysis focuses on pricing trends, neighborhood activity,
 host behavior, and demand patterns using real Airbnb data.
 
-The work is being carried out entirely in **Jupyter Notebook** with a structured,
-step-by-step analytical approach.
+The work is being carried out in Jupyter Notebook using a structured,
+phase-based analytical workflow.
 
 ---
 
@@ -23,6 +23,8 @@ step-by-step analytical approach.
 - `reviews.csv` – Guest reviews with timestamps (used for demand analysis)
 - `neighbourhoods.csv` – Reference neighborhood data
 
+Raw data is stored separately from processed data to maintain reproducibility.
+
 ---
 
 ## Tools & Technologies
@@ -30,68 +32,82 @@ step-by-step analytical approach.
 - Pandas
 - NumPy
 - Matplotlib
-- Seaborn
 - Jupyter Notebook
 - Git & GitHub
 
 ---
 
+## Project Structure
+
+Airbnb Listings Analysis/
+│
+├── dataset/
+│ ├── listings.csv
+│ ├── reviews.csv
+│ ├── neighbourhoods.csv
+│ └── processed/
+│ └── clean_listings.csv
+│
+├── notebooks/
+│ ├── 01_data_cleaning.ipynb
+│ └── 02_descriptive_analysis.ipynb
+│
+└── README.md
+
+
+---
+
 ## Work Completed So Far
 
-### 1. Project Setup
-- Created a clean and organized project structure
-- Set up GitHub repository and version control
-- Configured Jupyter Notebook environment
-
----
-
-### 2. Data Loading & Initial Inspection
-- Loaded all datasets (`listings`, `reviews`, `neighbourhoods`) from local directory
-- Inspected dataset dimensions, column names, and data types
-- Verified schema consistency across datasets
-
----
-
-### 3. Missing Value Analysis
-- Performed a detailed missing value assessment on all columns
-- Identified columns with 100% missing values:
+### Phase 1 – Data Cleaning & Preparation
+- Loaded raw Airbnb datasets into Jupyter Notebook
+- Performed detailed missing value analysis
+- Dropped non-informative columns:
   - `neighbourhood_group`
   - `license`
-- Dropped non-informative columns from the dataset
+- Removed listings with missing `price`
+- Validated and confirmed `price` as numeric (`float64`)
+- Conducted sanity checks on price range (min = 20, max = 1000)
+- Preserved missing review-related fields as meaningful demand signals
+- Exported cleaned dataset as:
+  - `dataset/processed/clean_listings.csv`
+
+The dataset is now clean and analysis-ready.
 
 ---
 
-### 4. Processed Dataset Export
-- Saved the cleaned dataset as `clean_listings.csv`
-- Maintained separation between raw and processed data
-- This dataset will be used for all further analysis and visualization
+### Phase 2 – Descriptive Analysis (In Progress)
 
+#### 1. Overall Pricing Analysis
+- Mean nightly price: ~167
+- Median nightly price: ~127
+- Identified right-skewed price distribution
+- Observed significant price variability across listings
+
+#### 2. Room Type Distribution
+- Entire home/apartment listings dominate the market
+- Private rooms represent a small secondary segment
+- Hotel and shared rooms are minimal
+- Indicates a market driven primarily by leisure and full-property stays
 
 ---
 
-## Current Data Status
-- Dataset is structurally clean and analysis-ready
-- Core pricing and location fields have no missing values
-- Review-related missing values are preserved intentionally for demand analysis
+## Current Status
+Phase 1 (Data Cleaning) – Completed  
+Phase 2 (Descriptive Analysis) – In Progress  
+
+Next steps include neighborhood-level analysis, pricing comparison by area,
+and review-based demand analysis.
 
 ---
 
 ## Next Steps
-- Clean and standardize the `price` column (convert to numeric, inspect outliers)
-- Merge listings and reviews datasets
-- Perform exploratory data analysis (EDA):
-  - Price distribution (mean vs median)
-  - Room type distribution
-  - Listings per neighborhood
-- Analyze review trends to identify demand seasonality
+- Analyze listings by neighborhood
+- Compare average price by neighborhood
+- Merge listings with reviews dataset
+- Study demand trends and seasonality
 - Conduct host-level analysis
 - Generate market expansion recommendations
-
----
-
-## Status
-**Work in progress**  
-This repository is under active development with incremental commits.
 
 ---
 
